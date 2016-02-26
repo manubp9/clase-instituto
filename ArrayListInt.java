@@ -25,7 +25,7 @@ public class ArrayListInt
     {
         int tamaño = lista.length;//variable local que representa el tamaño de la lista
         int[] lista2 = new int[tamaño+1];//crea una V L  arraylist lista2 que equivale al tamaño 
-                                       //actual de la lista mas uno(el elemento que añadimos)
+        //actual de la lista mas uno(el elemento que añadimos)
         for(int num = 0;num < tamaño;num++)
         {
             lista2[num] = lista[num];
@@ -34,7 +34,8 @@ public class ArrayListInt
         lista = lista2;
 
     }
-     /**
+
+    /**
      * Añade un elemento a la coleccion en la posicion especificada
      */
     public void add(int index,int elemento)
@@ -52,17 +53,16 @@ public class ArrayListInt
                     lista2[indiceTemp]= elemento;
                 }
                 else{
-                 lista2[indiceTemp] = lista[indiceLista];
+                    lista2[indiceTemp] = lista[indiceLista];
                     indiceLista++;
                 }
                 indiceTemp++;
             }
-            
+
             lista = lista2;
         }
-     }
-            
-            
+    }
+
     /**
      *Vacia la coleccion 
      */
@@ -86,11 +86,58 @@ public class ArrayListInt
                 enLaLista = true;
             }
             index++;
-            
+
         }
         return enLaLista;
 
     }
+
+    /**
+     *  devuelve el elemento existente en la posición indicada. 
+     *  Si el valor de index no es válido, entonces devuelve -1.
+     */
+    public int get(int index)
+    {
+        int num = 0;
+        if(index >= 0 && index < lista.length )
+        {
+            num = lista[index];
+        }
+        else 
+        {
+            num = -1;
+        }
+        return num;
+
+    }
+
+    /**
+     * reemplaza el elemento en la posicion index con el valor del elemento
+     * si el idice no es valido , no hace nada
+     */
+    public void set(int index, int element)
+    {
+
+    }
+
+    /**
+     * reemplaza el elemento en la posición index con el valor de element. 
+     * Si el índice no es válido, no hace nada.
+     */
+    public void set(int index,int element)
+    {
+
+    }
+
+    /**
+     * devuelve el indice en el que aparece la primera ocurrencia 
+     * del elemento especificado o -1 en caso de que la colección no contenga el elemento especificado.
+     */
+    public int indexOf(int elemento)
+    {
+
+    }
+
     /**
      * Devuelve true si la lista no contiene elementos.
      */
@@ -103,16 +150,16 @@ public class ArrayListInt
         }
         return vacio;
     }
+
     /**
      * elimina de la colección el elemento que ocupa la posición especificada y devuelve dicho elemento. 
      * Si el valor de index no es válido, no hace nada y devuelve -1.
      */
     public void remove(int index)
     {
-        
+
     }
 
-   
     /**
      * Devuelve el numero de elementos de la coleccion
      */
