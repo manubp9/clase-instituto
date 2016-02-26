@@ -117,27 +117,17 @@ public class ArrayListInt
      */
     public void set(int index, int element)
     {
-
+        if(index >= 0 && index < lista.length )
+        {
+           lista[index]= element;
+        }
+        else
+        {
+            System.out.println("El indice no es correcto");
+        }
     }
 
-    /**
-     * reemplaza el elemento en la posición index con el valor de element. 
-     * Si el índice no es válido, no hace nada.
-     */
-    public void set(int index,int element)
-    {
-
-    }
-
-    /**
-     * devuelve el indice en el que aparece la primera ocurrencia 
-     * del elemento especificado o -1 en caso de que la colección no contenga el elemento especificado.
-     */
-    public int indexOf(int elemento)
-    {
-
-    }
-
+    
     /**
      * Devuelve true si la lista no contiene elementos.
      */
@@ -150,16 +140,6 @@ public class ArrayListInt
         }
         return vacio;
     }
-
-    /**
-     * elimina de la colección el elemento que ocupa la posición especificada y devuelve dicho elemento. 
-     * Si el valor de index no es válido, no hace nada y devuelve -1.
-     */
-    public void remove(int index)
-    {
-
-    }
-
     /**
      * Devuelve el numero de elementos de la coleccion
      */
