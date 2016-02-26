@@ -21,7 +21,7 @@ public class ArrayListInt
     /**
      *Añade un elemento a la coleccion al final de la misma
      */
-    public void addElemento(int elemento)
+    public void add(int elemento)
     {
         int tamaño = lista.length;//variable local que representa el tamaño de la lista
         int[] lista2 = new int[tamaño+1];//crea una V L  arraylist lista2 que equivale al tamaño 
@@ -34,6 +34,65 @@ public class ArrayListInt
         lista = lista2;
 
     }
+     /**
+     * Añade un elemento a la coleccion en la posicion especificada
+     */
+    public void add(int index,int elemento)
+    {
+        int tamaño = lista.length;
+        if(index <= lista.length && index >=0)//compruebo que el indice es valido
+        {
+            int indiceTemp = 0;
+            int indiceLista = 0;
+            int[] lista2 = new int[tamaño+1];
+            while(indiceLista<tamaño)
+            {
+                if (indiceTemp == index)//
+                {
+                    lista2[indiceTemp]= elemento;
+                }
+                else{
+                 lista2[indiceTemp] = lista[indiceLista];
+                    indiceLista++;
+                }
+                indiceTemp++;
+            }
+            
+            lista = lista2;
+        }
+     }
+            
+            
+    /**
+     *Vacia la coleccion 
+     */
+    public void clear()
+    {
+        lista = new int[0];//igualo la lista a 0 para resetearla
+
+    }
+
+    /**
+     * devuelve true si la coleccion contiene ese elemento
+     */
+    public boolean contains(int elemento)
+    {
+        boolean enLaLista = false;//interruptor logico para devolver si hay ese elemento en la lista 
+        int index = 0;
+        while(index < lista.length && !(enLaLista))//
+        {
+            if(lista[index]==elemento)
+            {
+                enLaLista = true;
+            }
+            index++;
+            
+        }
+        return enLaLista;
+
+    }
+
+   
 
    
     /**
