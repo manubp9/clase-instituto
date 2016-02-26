@@ -91,8 +91,26 @@ public class ArrayListInt
         return enLaLista;
 
     }
-
-   
+    /**
+     * Devuelve true si la lista no contiene elementos.
+     */
+    public boolean isEmpty()
+    {
+        boolean vacio = false;
+        if(lista.length == 0)
+        {
+            vacio = true;
+        }
+        return vacio;
+    }
+    /**
+     * elimina de la colección el elemento que ocupa la posición especificada y devuelve dicho elemento. 
+     * Si el valor de index no es válido, no hace nada y devuelve -1.
+     */
+    public void remove(int index)
+    {
+        
+    }
 
    
     /**
