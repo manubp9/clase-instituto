@@ -7,27 +7,40 @@
  */
 public class ArrayListInt
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Atributo que crea una lista de tipo int
+    private int[] lista;
 
     /**
      * Constructor for objects of class ArrayListInt
      */
     public ArrayListInt()
     {
-        // initialise instance variables
-        x = 0;
+        lista = new int[0];//iniia la lista con 0 espacios para no desperdiciar espacio sin usar
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     *Añade un elemento a la coleccion al final de la misma
      */
-    public int sampleMethod(int y)
+    public void addElemento(int elemento)
     {
-        // put your code here
-        return x + y;
+        int tamaño = lista.length;//variable local que representa el tamaño de la lista
+        int[] lista2 = new int[tamaño+1];//crea una V L  arraylist lista2 que equivale al tamaño 
+                                       //actual de la lista mas uno(el elemento que añadimos)
+        for(int num = 0;num < tamaño;num++)
+        {
+            lista2[num] = lista[num];
+        }
+        lista2[tamaño]= elemento;
+        lista = lista2;
+
+    }
+
+   
+    /**
+     * Devuelve el numero de elementos de la coleccion
+     */
+    public int size()
+    {
+        return lista.length;
     }
 }
