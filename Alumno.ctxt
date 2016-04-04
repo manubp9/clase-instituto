@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=nombre\ edad
+comment0.target=Alumno(java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Alumno\r\n
+comment1.params=grade
+comment1.target=void\ enterGrade(int)
+comment1.text=\r\npermita\ introducir\ una\ nota\ entera\ del\ alumno.\ \r\nEste\ m\u00E9todo\ se\ peude\ invocar\ tantas\ veces\ como\ deseemos.\r\n
+numComments=2

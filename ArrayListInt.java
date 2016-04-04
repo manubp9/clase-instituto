@@ -127,38 +127,29 @@ public class ArrayListInt
         }
     }
 
-
-
     /**
      * elimina de la colección el elemento que ocupa la posición especificada y devuelve dicho elemento. 
      * Si el valor de index no es válido, no hace nada y devuelve -1.
      */
-    public int remove(int index)
+
+    public int remove(int index) 
     {
-        int tamaño = lista.length;//variable local que representa el tamaño de la lista
-        int[] lista2 = new int[tamaño-1];//crea una V L  arraylist lista2 que equivale al tamaño 
-        int num = lista[index];
-        if(index >= 0 && index < lista.length )
+        int eliminado = -1;
+        if(index >= 0 && index < lista.length)
         {
-            for(int num2 = 0;num2 < tamaño;num2++)
-            {
-                if(num2 == index)
-                {
-                    num ++;
-                }
-                lista2[num2] = lista[num2];
+            int[] nuevoArray = lista;
+            lista = new int[lista.length -1];
+
+            for(int i=0; i < index; i++){
+                lista[i] = nuevoArray[i];
             }
-            lista = lista2;
-            
-            
+            for (int i=index; i<lista.length; i++){
+                lista[i] = nuevoArray[i +1];
+            }
+            eliminado = nuevoArray[index];
 
         }
-        else
-        {
-            num = -1;
-        }
-        return num;
-        
+        return eliminado;
     }
 
     /**
@@ -174,6 +165,24 @@ public class ArrayListInt
         return vacio;
     }
 
+    public int indexOf(int elemento)
+    {
+        int index = -1;
+        int cont = 0;
+        if (contains(elemento)) {
+            boolean encontrado = false;
+            while ((cont < lista.length) && (!encontrado)) {
+                if (lista[cont] == elemento) {
+                    index = cont;
+                    encontrado = true;
+                }
+                cont++;
+            }
+
+        }
+        return index;
+    }
+
     /**
      * Devuelve el numero de elementos de la coleccion
      */
@@ -181,4 +190,5 @@ public class ArrayListInt
     {
         return lista.length;
     }
+    
 }
