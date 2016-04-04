@@ -23,7 +23,7 @@ public class Alumno
         this.edad = edad;
         numClase = inicialVal;
         inicialVal++;
-        ArrayListInt notas = new ArrayListInt();
+       notas = new ArrayListInt();
     }
 
     /**
@@ -33,5 +33,17 @@ public class Alumno
     public void enterGrade(int grade)
     {
         notas.add(grade);
+    }
+    /**
+     * Un método que permita conocer la nota media (en decimal) del alumno en este momento.
+     */
+    public float notaMedia()
+    {
+        float suma = 0;
+        for(int i = 0;i<notas.size();i++)
+        {
+            suma = suma + notas.get(i);
+        }
+        return suma/(float)notas.size();
     }
 }
