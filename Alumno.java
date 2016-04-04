@@ -46,4 +46,11 @@ public class Alumno
         }
         return suma/(float)notas.size();
     }
+    /**
+     * Un método que indique si el alumno esta aprobado o no en función de su nota media actual.
+     */
+    public boolean estado()
+    {
+        return notaMedia()>=5;
+    }
 }
