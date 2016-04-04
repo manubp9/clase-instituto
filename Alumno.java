@@ -53,4 +53,17 @@ public class Alumno
     {
         return notaMedia()>=5;
     }
+    /**
+     * Un método que muestre todos los datos del alumno: 
+     * nombe, edad, numero de clase, notas, nota media y si esta o no aprobado.
+     */
+    public void verDatos()
+    {
+        System.out.println("Nombre "+nombre+"\n"+"Edad "+edad+"\n"+"Numero de clase "+numClase);
+        for(int i =0;i <notas.size();i++)
+        {
+            System.out.println("Calificacion "+notas.get(i));
+        }
+        System.out.println("Nota media "+notaMedia()+"\n"+"Aprobado/Suspenso "+estado());
+    }
 }
